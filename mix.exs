@@ -8,6 +8,8 @@ defmodule YearInProgress.MixProject do
       elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
+      description: description(),
+      package: package(),
       escript: escript()
     ]
   end
@@ -28,5 +30,18 @@ defmodule YearInProgress.MixProject do
 
   defp escript do
     [main_module: YearInProgress.CLI]
+  end
+
+  defp description do
+    "Draws year in progress on your terminal."
+  end
+
+  defp package do
+    [
+      name: "year_in_progress",
+      files: ~w(lib .formatter.exs mix.exs README* readme* LICENSE* license*),
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/murat/year-in-progress"}
+    ]
   end
 end

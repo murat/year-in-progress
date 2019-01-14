@@ -11,7 +11,7 @@ defmodule YearInProgress.CLI do
         })
 
   def main(_args) do
-    day = (@diff / 60 / 60 / 24) |> Float.floor() |> Kernel.trunc()
+    day = (@diff / 60 / 60 / 24) |> Float.ceil(0) |> Kernel.trunc()
 
     ordinal_of_day =
       if rem(day, 100) > 10 && rem(day, 100) < 20 do
