@@ -24,7 +24,8 @@ defmodule YearInProgress.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:progress_bar, "> 0.0.0"}
+      {:progress_bar, "> 0.0.0"},
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 
@@ -39,7 +40,7 @@ defmodule YearInProgress.MixProject do
   defp package do
     [
       name: "year_in_progress",
-      files: ~w(lib .formatter.exs mix.exs README* readme* LICENSE* license*),
+      files: ~w(lib .formatter.exs mix.exs README* LICENSE*),
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/murat/year-in-progress"}
     ]
